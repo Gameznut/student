@@ -1,0 +1,42 @@
+{
+  "name": "time-table",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview --port 4173",
+    "test:unit": "vitest --environment jsdom",
+    "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
+    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+  },
+  "dependencies": {
+    "pinia": "^2.0.23",
+    "v-calendar": "^2.4.1",
+    "vue": "^3.2.41",
+    "vue-grid-layout-next": "^0.1.0",
+    "vue-router": "^4.1.6",
+    "vue3-draggable-resizable": "^1.6.5",
+    "vue3-grid-layout": "^1.0.0",
+    "vue3-moveable": "^0.12.1"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^20.0.0",
+    "@types/node": "^18.11.9",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/test-utils": "^2.2.1",
+    "@vue/tsconfig": "^0.1.3",
+    "autoprefixer": "^10.4.13",
+    "cypress": "^10.11.0",
+    "jsdom": "^20.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.18",
+    "start-server-and-test": "^1.14.0",
+    "tailwindcss": "^3.2.1",
+    "typescript": "~4.8.4",
+    "vite": "^3.2.2",
+    "vitest": "^0.24.5",
+    "vue-tsc": "^1.0.9"
+  }
+}
